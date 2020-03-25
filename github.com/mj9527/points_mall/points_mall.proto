@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package points_mall;
+
+//default go package name
+option  go_package ="github.com/mj9527/points_mall";
+
+// protoc --go_out=plugins=grpc:./ points_mall.proto
+
+// The greeting service definition.
+service PointMall {
+    rpc PayCoin(PayCoinReq) returns(PayCoinRsp){}
+}
+
+message PayCoinReq {
+    string time = 1; //
+    string appId = 2; //
+    string sign = 3; //
+    string orderNo = 4; //
+    string account = 5; //
+    string type = 6; //
+}
+
+message PayCoinRsp {
+    int32 result = 1; //
+}
+
