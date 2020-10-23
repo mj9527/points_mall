@@ -23,6 +23,6 @@ message PayCoinReq {
 
 message PayCoinRsp {
     int32 result = 1; //
-    string msg = 2; //
+    string msg = 2; //g
 }
 
